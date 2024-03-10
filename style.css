@@ -6,6 +6,15 @@ body {
 
 }
 
+#search-input{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 10px 10px;
+}
+
+
 .loader-overlay {
     position: fixed;
     top: 0;
@@ -13,59 +22,63 @@ body {
     width: 100%;
     height: 100%;
     background-image: url(medias/forest.gif);
-    background-position:0px -100px;
+    background-position: 0px -100px;
     background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    z-index: 9999; /* Ensure it's above other content */
+    z-index: 9999;
+    /* Ensure it's above other content */
     opacity: 1;
-    transition: opacity 1s ease; /* Add fade-out transition */
-  }
-  
- 
-  .loader-gif {
-    width: 170px; /* Adjust the size as needed */
+    transition: opacity 1s ease;
+    /* Add fade-out transition */
+}
+
+
+.loader-gif {
+    width: 170px;
+    /* Adjust the size as needed */
     height: 150px;
     display: block;
     margin: 0 auto;
-    
-  }
+}
 
-  .loader-overlay p{
+.loader-overlay p {
     color: white;
-    margin-top: 10px; /* Adjust as needed */
+    margin-top: 10px;
+    /* Adjust as needed */
     padding-left: 50px;
     font-size: 2rem;
-  }
+}
 
-  /* Hide the content by default */
+/* Hide the content by default */
 .hidden {
     display: none;
-  }
-  
-  /* Show the content when the loader is hidden */
-  .loader-overlay.hidden ~ .pokedex {
-    opacity: 1;
-    transition: opacity 1s ease-in-out; /* Add fade-in transition */
-  }
+}
 
-.logo{
+/* Show the content when the loader is hidden */
+.loader-overlay.hidden~.pokedex {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    /* Add fade-in transition */
+}
+
+.logo {
     padding-bottom: 2em;
 }
 
 
 .pokedex {
-    
-    max-width: 600px;
+
+    max-width: 500px;
     margin: 0 auto;
     padding: 5em;
     border: 10px ridge rgb(250, 4, 4);
     border-radius: 20px;
     background-color: #2e2929df;
-    
+
 
 }
 
@@ -90,28 +103,28 @@ body {
 .pokemon:hover {
     border: 5px ridge rgb(109, 169, 252);
     transform: scale(1.2);
-    background:url("medias/back.jpeg");
+    background: url("medias/back.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: repeat;
     color: #fff;
-   text-shadow: rgb(109, 169, 252) 5px;
+    text-shadow: rgb(109, 169, 252) 5px;
     font-family: "Din Alternate";
-    
+
 }
 
 
-.pokemon_image{
+.pokemon_image {
     padding-top: 2rem;
 }
 
-.pokemon p::first-letter{
+.pokemon p::first-letter {
     text-transform: uppercase;
 }
 
 .pokemon img {
     max-width: 100px;
-    
+
 }
 
 .pokemon-details {
@@ -119,8 +132,8 @@ body {
     display: none;
 }
 
-.popup img{
-   width: 150px;
+.popup img {
+    width: 150px;
 }
 
 .popup-container {
@@ -130,13 +143,15 @@ body {
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.691);
     border-radius: 10px 10px;
-    border: yellow 5px ridge ;
+    border: yellow 5px ridge;
     padding: 20px;
     width: 40vw;
     height: 60vh;
     overflow: auto;
-    z-index: 1000; /* Adjust z-index as needed */
-    display: none; /* Hide by default */
+    z-index: 1000;
+    /* Adjust z-index as needed */
+    display: none;
+    /* Hide by default */
 }
 
 .popup-content {
@@ -146,144 +161,161 @@ body {
 }
 
 .popup-container.fire {
-    background-image:url(medias/firebg.png) ;
+    background-image: url(medias/firebg.png);
     background-position: center;
     background-size: cover;
-    background-blend-mode:darken;
-    color:  #FFA07A;
-    
+    background-blend-mode: darken;
+    color: #FFA07A;
+
 }
 
 .popup-container.water {
-    background-image:url(medias/waterbg.png) ;
+    background-image: url(medias/waterbg.png);
     background-position: center;
     background-size: cover;
-    background-blend-mode:darken ;
-    color: #ADD8E6;;
+    background-blend-mode: darken;
+    color: #ADD8E6;
+    ;
 }
 
 .popup-container.grass {
-    background-image:url(medias/grassbg.png) ;
+    background-image: url(medias/grassbg.png);
     background-position: center;
     background-size: cover;
-    background-blend-mode:darken ;
+    background-blend-mode: darken;
     color: #90EE90;
 }
 
 .popup-container.electric {
-    background-image:url(medias/electricbg.png) ;
+    background-image: url(medias/electricbg.png);
     background-position: center;
     background-size: cover;
-    background-blend-mode:darken ;
+    background-blend-mode: darken;
+    color: #FFD700;
 }
 
 .popup-container.normal {
-    background-image:url(medias/normalbg.png) ;
+    background-image: url(medias/normalbg.png);
     background-position: center;
     background-size: cover;
-    background-blend-mode:darken ;
+    background-blend-mode: darken;
+    color: #D3D3D3;
 }
 
 .popup-container.fighting {
-    background-image:url(medias/fightingbg.png) ;
+    background-image: url(medias/fightingbg.png);
     background-position: center;
     background-size: cover;
-    background-blend-mode:darken ;
+    background-blend-mode: darken;
+    color: #dd6868;
 }
 
 .popup-container.flying {
-    background-image:url(medias/flyingbg.png) ;
+    background-image: url(medias/flyingbg.png);
     background-position: center;
     background-size: cover;
-    background-blend-mode:darken ;
+    background-blend-mode: darken;
+    color: #87CEEB;
 }
 
 .popup-container.poison {
-    background-image:url(medias/poisonbg.png) ;
+    background-image: url(medias/poisonbg.png);
     background-position: center;
     background-size: cover;
-    background-blend-mode:darken ;
+    background-blend-mode: darken;
+    color: #aa0cee;
 }
 
 .popup-container.ground {
-    background-image:url(medias/groundbg.png) ;
+    background-image: url(medias/groundbg.png);
     background-position: center;
     background-size: cover;
-    background-blend-mode:darken ;
+    background-blend-mode: darken;
+    color: #D2B48C;
 }
 
 .popup-container.rock {
-    background-image:url(medias/rockbg.png) ;
+    background-image: url(medias/rockbg.png);
     background-position: center;
     background-size: cover;
-    background-blend-mode:darken ;
+    background-blend-mode: darken;
+    color: #A52A2A;
 }
 
 .popup-container.bug {
-    background-image:url(medias/bugbg.png) ;
+    background-image: url(medias/bugbg.png);
     background-position: center;
     background-size: cover;
-    background-blend-mode:darken ;
+    background-blend-mode: darken;
+    color: #32CD32;
 }
 
 .popup-container.ghost {
-    background-image:url(medias/ghostbg.png) ;
+    background-image: url(medias/ghostbg.png);
     background-position: center;
     background-size: cover;
-    background-blend-mode:darken ;
+    background-blend-mode: darken;
+    color: #9d56df;
 }
 
 .popup-container.steel {
-    background-image:url(medias/steelbg.png) ;
+    background-image: url(medias/steelbg.png);
     background-position: center;
     background-size: cover;
-    background-blend-mode:darken ;
+    background-blend-mode: darken;
+    color: #708090;
 }
 
 .popup-container.psychic {
-    background-image:url(medias/psychicbg.png) ;
+    background-image: url(medias/psychicbg.png);
     background-position: center;
     background-size: cover;
-    background-blend-mode:darken ;
+    background-blend-mode: darken;
+    color: #FF69B4;
 }
 
 .popup-container.ice {
-    background-image:url(medias/icebg.png) ;
+    background-image: url(medias/icebg.png);
     background-position: center;
     background-size: cover;
-    background-blend-mode:darken ;
+    background-blend-mode: darken;
+    color: #87CEFA;
 }
 
 .popup-container.dragon {
-    background-image:url(medias/dragonbg.png) ;
+    background-image: url(medias/dragonbg.png);
     background-position: center;
     background-size: cover;
-    background-blend-mode:darken ;
+    background-blend-mode: darken;
+    color: #4169E1;
 }
 
 .popup-container.dark {
-    background-image:url(medias/darkbg.png) ;
+    background-image: url(medias/darkbg.png);
     background-position: center;
     background-size: cover;
-    background-blend-mode:darken ;
+    background-blend-mode: darken;
+    color: #2F4F4F;
 }
 
 .popup-container.fairy {
-    background-image:url(medias/fairybg.png) ;
+    background-image: url(medias/fairybg.png);
     background-position: center;
     background-size: cover;
-    background-blend-mode:darken ;
+    background-blend-mode: darken;
+    color: #FFB6C1;
 }
 
 
 
 .popup-container.active {
-    display: block; /* Show when active */
+    display: block;
+    /* Show when active */
 }
 
-.pokemon-details h2:first-letter{
+.pokemon-details h2:first-letter {
     text-transform: uppercase;
-    
+
 }
 
 
@@ -291,16 +323,17 @@ body {
     text-transform: uppercase;
 }
 
-.pokemon-list h2:first-letter{
+.pokemon-list h2:first-letter {
     text-transform: uppercase;
 }
 
 .scroll-to-top-button {
-    display: none;
+    display: block;
+    /* Ensure it's displayed initially */
     position: fixed;
     bottom: 20px;
     right: 5em;
-    z-index: 99;
+    z-index: 100;
     font-size: 24px;
     border: none;
     padding: 1em;
@@ -309,10 +342,14 @@ body {
     border-radius: 25px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
-  }
-  
-  .scroll-to-top-button:hover {
+}
+
+.scroll-to-top-button.hidden {
+    display: none;
+    /* Hide when the button should be hidden */
+}
+
+.scroll-to-top-button:hover {
     background-color: rgb(255, 127, 127);
     transform: scale(1.2);
-  }
-  
+}
