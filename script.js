@@ -288,7 +288,7 @@ setTimeout(function () {
     loaderOverlay.classList.add('hidden');
     document.querySelector('.pokedex').classList.remove('hidden');
   }, 200); // Transition duration + a little delay
-}, 5000); // 5000 milliseconds = 5 seconds
+}, 8000); // 5000 milliseconds = 5 seconds
 
 document.addEventListener('DOMContentLoaded', function () {
   const loadingText = document.getElementById('loading-text');
