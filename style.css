@@ -6,6 +6,52 @@ body {
 
 }
 
+.loader-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(medias/forest.gif);
+    background-position:0px -100px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 9999; /* Ensure it's above other content */
+    opacity: 1;
+    transition: opacity 1s ease; /* Add fade-out transition */
+  }
+  
+ 
+  .loader-gif {
+    width: 170px; /* Adjust the size as needed */
+    height: 150px;
+    display: block;
+    margin: 0 auto;
+    
+  }
+
+  .loader-overlay p{
+    color: white;
+    margin-top: 10px; /* Adjust as needed */
+    padding-left: 50px;
+    font-size: 2rem;
+  }
+
+  /* Hide the content by default */
+.hidden {
+    display: none;
+  }
+  
+  /* Show the content when the loader is hidden */
+  .loader-overlay.hidden ~ .pokedex {
+    opacity: 1;
+    transition: opacity 1s ease-in-out; /* Add fade-in transition */
+  }
+
 .logo{
     padding-bottom: 2em;
 }
@@ -19,6 +65,7 @@ body {
     border: 10px ridge rgb(250, 4, 4);
     border-radius: 20px;
     background-color: #2e2929df;
+    
 
 }
 
@@ -45,34 +92,14 @@ body {
     transform: scale(1.2);
     background:url("medias/back.jpeg");
     background-size: cover;
-    background-repeat: no-repeat;
+    background-position: center;
+    background-repeat: repeat;
     color: #fff;
    text-shadow: rgb(109, 169, 252) 5px;
     font-family: "Din Alternate";
     
 }
 
-.pokemon-card {
-    border: 5px ridge #ccc;
-    background-color: white;
-    border-radius: 20px;
-    padding: 10px;
-    margin: 5px;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.pokemon-card:hover {
-    border: 5px ridge rgb(109, 169, 252);
-    transform: scale(1.2);
-    background:url("medias/back.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: #fff;
-   text-shadow: rgb(109, 169, 252) 5px;
-    font-family: "Din Alternate";
-    
-}
 
 .pokemon_image{
     padding-top: 2rem;
@@ -84,6 +111,7 @@ body {
 
 .pokemon img {
     max-width: 100px;
+    
 }
 
 .pokemon-details {
@@ -91,13 +119,176 @@ body {
     display: none;
 }
 
+.popup img{
+   width: 150px;
+}
+
+.popup-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.691);
+    border-radius: 10px 10px;
+    border: yellow 5px ridge ;
+    padding: 20px;
+    width: 40vw;
+    height: 60vh;
+    overflow: auto;
+    z-index: 1000; /* Adjust z-index as needed */
+    display: none; /* Hide by default */
+}
+
+.popup-content {
+    border-radius: 10px 10px;
+    padding: 20px;
+    font-family: "DotGothic16", sans-serif;
+}
+
+.popup-container.fire {
+    background-image:url(medias/firebg.png) ;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode:darken;
+    color:  #FFA07A;
+    
+}
+
+.popup-container.water {
+    background-image:url(medias/waterbg.png) ;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode:darken ;
+    color: #ADD8E6;;
+}
+
+.popup-container.grass {
+    background-image:url(medias/grassbg.png) ;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode:darken ;
+    color: #90EE90;
+}
+
+.popup-container.electric {
+    background-image:url(medias/electricbg.png) ;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode:darken ;
+}
+
+.popup-container.normal {
+    background-image:url(medias/normalbg.png) ;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode:darken ;
+}
+
+.popup-container.fighting {
+    background-image:url(medias/fightingbg.png) ;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode:darken ;
+}
+
+.popup-container.flying {
+    background-image:url(medias/flyingbg.png) ;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode:darken ;
+}
+
+.popup-container.poison {
+    background-image:url(medias/poisonbg.png) ;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode:darken ;
+}
+
+.popup-container.ground {
+    background-image:url(medias/groundbg.png) ;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode:darken ;
+}
+
+.popup-container.rock {
+    background-image:url(medias/rockbg.png) ;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode:darken ;
+}
+
+.popup-container.bug {
+    background-image:url(medias/bugbg.png) ;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode:darken ;
+}
+
+.popup-container.ghost {
+    background-image:url(medias/ghostbg.png) ;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode:darken ;
+}
+
+.popup-container.steel {
+    background-image:url(medias/steelbg.png) ;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode:darken ;
+}
+
+.popup-container.psychic {
+    background-image:url(medias/psychicbg.png) ;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode:darken ;
+}
+
+.popup-container.ice {
+    background-image:url(medias/icebg.png) ;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode:darken ;
+}
+
+.popup-container.dragon {
+    background-image:url(medias/dragonbg.png) ;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode:darken ;
+}
+
+.popup-container.dark {
+    background-image:url(medias/darkbg.png) ;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode:darken ;
+}
+
+.popup-container.fairy {
+    background-image:url(medias/fairybg.png) ;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode:darken ;
+}
+
+
+
+.popup-container.active {
+    display: block; /* Show when active */
+}
+
 .pokemon-details h2:first-letter{
     text-transform: uppercase;
     
 }
 
-.pokemon-details img {
-    max-width: 200px;
+
+.pokemon_details h2::first-letter {
+    text-transform: uppercase;
 }
 
 .pokemon-list h2:first-letter{
