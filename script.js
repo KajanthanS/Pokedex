@@ -242,7 +242,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
   // Fetch all Pokémon data in parallel
   const requests = Array.from({
-    length: 1016
+    length: 1025
   }, (_, i) => fetchPokemonDetails(i + 1));
   const responses = await Promise.all(requests);
   responses.forEach(data => displayPokemon(data));
